@@ -31,3 +31,21 @@
 
 en:
   hello: "Hello world"
+  header: "| Ruby on Rails Tutorial Sample App"
+  static_pages:
+    home:
+      title: "Home"
+      link: "http://www.railstutorial.org/"
+      link_name: "Ruby on Rails Tutorial"
+    help:
+      title: "Help"
+      link: "http://www.railstutorial.org/help"
+      link_name: "Rails Tutorial help section"
+    about:
+      title: "About"
+      link1: "http://www.railstutorial.org/book"
+      link_name1: "book"
+      link2: "http://screencasts.railstutorial.org/"
+      link_name2: "screencast series"
+      link3: "http://rubyonrails.org/"
+      link_name3: "Ruby on Rails"

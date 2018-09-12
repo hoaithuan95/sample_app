@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% provide(:title, "About") %>
 <h1>About</h1>
 <p>
@@ -8,4 +9,18 @@
   to teach web development with
   <a href="http://rubyonrails.org/">Ruby on Rails</a>.
   This is the sample application for the tutorial.
+=======
+<% provide:title, (t ".title") %>
+<h1>About</h1>
+<p>
+  The <%= link_to (t"static_pages.home.link") do%>
+      <em>
+        <%= (t "static_pages.home.link_name") %>
+      </em>
+    <% end %> is a
+  <%= link_to (t ".link_name1"), (t ".link1")%> and
+  <%= link_to (t ".link_name2"), (t ".link2")%>
+  to teach web development with
+  <%= link_to (t ".link_name3"), (t ".link3")%></a>.
+>>>>>>> Chapter 3: Mostly static pages
 </p>
