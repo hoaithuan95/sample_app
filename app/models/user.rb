@@ -10,6 +10,7 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true, length: {minimum: Settings.user.password.min_size}, allow_nil: true
 
+  has_many :microposts, dependent: :destroy
   has_secure_password
   before_save {email.downcase!}
 
@@ -61,6 +62,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.hours.hours.ago
+  end
+
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 
   private

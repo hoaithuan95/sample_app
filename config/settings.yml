@@ -5,5 +5,7 @@ user:
     max_size: 255
   password:
     min_size: 6
+  content:
+    max_size: 140
 remember: "1"
 hours : 2
