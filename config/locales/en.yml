@@ -32,7 +32,7 @@
 en:
   hello: "Hello world"
   header: "Ruby on Rails Tutorial Sample App"
-  text: "Welcome to the Sample App"
+  Welcome: "Welcome to the Sample App"
   app: "Sample app"
   static_pages:
     home:
@@ -79,5 +79,17 @@ en:
       text1: "Log in"
   users:
     new:
-      title: "Sign up"
-      text : "This will be a signup page for new users."
+      title: "Sign in"
+      name1: "name"
+      name2: "email"
+      name3: "password"
+      name4: "password_confirmation"
+      text1: "Confirmation"
+      text2: "Create my account"
+  shared:
+    _error_messages:
+      text1: "The form contains"
+      error:
+        one: "%{count} error"
+        other: "%{count} errors"
+
