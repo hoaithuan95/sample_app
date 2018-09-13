@@ -1,0 +1,18 @@
+<footer class="footer">
+  <small>
+    <%= t("layouts._footer.text1") %>
+    <%= link_to t("static_pages.about.link1") do %>
+      <em>
+        <%= t("static_pages.home.link_name") %>
+      </em>
+    <% end %>
+    <%= t("layouts._footer.text2") %><%= link_to t("layouts._footer.link_name"), t("layouts._footer.link") %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("static_pages.about.title"), about_path %></li>
+      <li><%= link_to t("static_pages.contact.title"), contact_path %></li>
+      <li><%= link_to t("layouts._footer.link_name1"), t("layouts._footer.link1") %></li>
+    </ul>
+  </nav>
+</footer>

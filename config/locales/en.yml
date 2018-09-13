@@ -32,17 +32,21 @@
 en:
   hello: "Hello world"
   header: "Ruby on Rails Tutorial Sample App"
+  app: "Sample app"
   static_pages:
     home:
       title: "Home"
       link: "http://www.railstutorial.org/"
       link_name: "Ruby on Rails Tutorial"
       text1: "This is home page for the"
-      text2: "sample application."
+      text2: "sample application"
     help:
       title: "Help"
       link: "http://www.railstutorial.org/help"
       link_name: "Rails Tutorial help section"
+      text1: "Get help on the Ruby on Rails Tutorial at the"
+      text2: "To get help on this sample app, see the"
+      text3: "book"
     about:
       title: "About"
       link1: "http://www.railstutorial.org/book"
@@ -51,3 +55,22 @@ en:
       link_name2: "screencast series"
       link3: "http://rubyonrails.org/"
       link_name3: "Ruby on Rails"
+      text1: "is a"
+      text2: "and"
+      text3: "to teach web development with"
+      text4: "The"
+    contact:
+      title: "Contact"
+      link: "http://www.railstutorial.org/contact"
+      link_name: "contact page"
+      text1: "Contact the Ruby on Rails Tutorial about the sample app at the"
+  layouts:
+    _footer:
+      text1: "The"
+      text2: "by"
+      link: "http://www.michaelhartl.com/"
+      link_name: "Michael Hartl"
+      link1: "http://news.railstutorial.org"
+      link_name1: "News"
+    _header:
+      text1: "Log in"
