@@ -10,8 +10,13 @@
       <%= f.label t("users.new.name3") %>
       <%= f.password_field :password, class: "form-control" %>
 
+      <%= f.label t("sessions.new.text1"), class: "checkbox inline" do %>
+        <%= f.check_box t("sessions.new.text1") %>
+        <span><%= t("sessions.new.mess") %></span>
+      <% end %>
+
       <%= f.submit t("layouts._header.text1"), class: "btn btn-primary" %>
     <% end %>
-    <p><%= t(".text") %> <%= link_to t("static_pages.home.text3"), signup_path %></p>
+    <p><%= t(".new_user") %> <%= link_to t("static_pages.home.text3"), signup_path %></p>
   </div>
 </div>

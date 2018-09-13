@@ -5,3 +5,4 @@ user:
     max_size: 255
   password:
     min_size: 6
+remember: "1"
