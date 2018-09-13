@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
         redirect_back_or user
       else
         message  = t("concerns.sessions.account")
-        message += t("concerns.sessions.please")
         flash[:warning] = message
         redirect_to root_path
       end
