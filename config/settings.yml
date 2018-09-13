@@ -1,0 +1,6 @@
+name:
+  max_size: 50
+email:
+  max_size: 255
+password:
+  min_size: 6
