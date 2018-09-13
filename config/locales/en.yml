@@ -34,6 +34,9 @@ en:
   error:
     one: "%{count} error"
     other: "%{count} errors"
+  micropost:
+    one: "%{count} micropost"
+    other: "%{count} microposts"
   header: "Ruby on Rails Tutorial Sample App"
   welcome: "Welcome to the Sample App"
   app: "Sample app"
@@ -105,9 +108,14 @@ en:
       change: "change"
     index:
       title: "All users"
+    show_follow:
+      microposts: "Microposts:"
+      view: "view my profile"
   shared:
     _error_messages:
       text1: "The form contains"
+    _user_info:
+      view: "view my profile"
   sessions:
     new:
       new_user: "New user?"
@@ -136,6 +144,9 @@ en:
     delete: "User deleted"
     email: "Email sent with password reset instructions"
     email_not: "Email address not found"
+    micropost: "Micropost created!"
+    d_micropost: "Micropost deleted"
+    no_post: "No post"
   account_activations:
     account: "Account activated!"
     invalid: "Invalid activation link"
@@ -147,3 +158,7 @@ en:
       if: "If you did not request your password to be reset, please ignore this email and
           your password will stay as it is."
       to: "To reset your password click the link below:"
+  microposts:
+    _microposts:
+      delete: "delete"
+      sure: "You sure?"

@@ -1,5 +1,6 @@
 class PasswordResetsController < ApplicationController
-  before_action :get_user, :valid_user, :check_expiration, only: [:edit, :update]
+
+  before_action :load_user, :valid_user, :check_expiration, only: [:edit, :update]
 
   def new; end
 
@@ -20,7 +21,7 @@ class PasswordResetsController < ApplicationController
 
   def update
     if params[:user][:password].empty?
-      @user.errors.add(:password, t("concerns.password_resets.pass_has"))
+      @user.errors.add(:password, t("concerns.password_resets.can't"))
       render :edit
     elsif @user.update_attributes(user_params)
       log_in @user
@@ -37,11 +38,11 @@ class PasswordResetsController < ApplicationController
     params.require(:user).permit(:password, :password_confirmation)
   end
 
-  def get_user
-    @user = User.find_by(email: params[:email])
+  def load_user
+    @user = User.find_by email: params[:email]
     return if @user
     redirect_to signup_path
-    flash[:danger] = t("flash.no_user")
+    flash[:danger]=t("flash.no_user")
   end
 
   def valid_user

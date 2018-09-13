@@ -1,4 +1,8 @@
-User.create!(name: "hoaithuan", email: "lethuan2@gmail.com", password: "111111",
+User.create!(name: "Example User", email: "example@railstutorial.org",
+  password: "foobar", password_confirmation: "foobar", admin: true,
+  activated: true, activated_at: Time.zone.now)
+
+User.create!(name: "test", email: "test@gmail.com", password: "111111",
   password_confirmation: "111111", admin: true, activated: true,
   activated_at: Time.zone.now)
 
@@ -9,3 +13,17 @@ User.create!(name: "hoaithuan", email: "lethuan2@gmail.com", password: "111111",
   User.create!(name: name, email: email, password: password,
     password_confirmation: password, activated: true, activated_at: Time.zone.now)
 end
+
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Lorem.sentence(5)
+  users.each {|user| user.microposts.create!(content: content)}
+end
+
+# Following relationships
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
