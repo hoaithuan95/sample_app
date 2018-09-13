@@ -31,10 +31,15 @@
 
 en:
   hello: "Hello world"
+  error:
+    one: "%{count} error"
+    other: "%{count} errors"
   header: "Ruby on Rails Tutorial Sample App"
   welcome: "Welcome to the Sample App"
   app: "Sample app"
   link: "#"
+  profile: "Profile updated"
+  please: "Please log in."
   static_pages:
     home:
       title: "Home"
@@ -92,12 +97,17 @@ en:
       name4: "password_confirmation"
       text1: "Confirmation"
       text2: "Create my account"
+    edit:
+      title: "Edit user"
+      update: "Update your profile"
+      save: "Save changes"
+      link_change: "http://gravatar.com/emails"
+      change: "change"
+    index:
+      title: "All users"
   shared:
     _error_messages:
       text1: "The form contains"
-      error:
-        one: "%{count} error"
-        other: "%{count} errors"
   sessions:
     new:
       new_user: "New user?"
@@ -106,5 +116,12 @@ en:
   concerns:
     sessions:
       text: "Invalid email/password combination"
+      accoutn: "Account not activated. "
+      please: "Check your email for the activation link."
   flash:
     no_user: "No such user"
+    please: "Please check your email to activate your account."
+    delete: "User deleted"
+  account_activations:
+    account: "Account activated!"
+    invalid: "Invalid activation link"

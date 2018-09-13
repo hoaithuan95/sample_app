@@ -6,13 +6,13 @@
         <li><%= link_to t("static_pages.home.title"), root_path %></li>
         <li><%= link_to t("static_pages.help.title"), help_path %></li>
         <% if logged_in? %>
-         <li><%= link_to t("layouts._header.text2"), t("link") %></li>
+          <li><%= link_to t("layouts._header.text2"), users_path %></li>
           <li class="dropdown">
             <%= link_to t("link") , class: "dropdown-toggle", data: {toggle:"dropdown"} do %>
             <%= t("layouts._header.text6") %> <b class="caret"></b> <% end %>
             <ul class="dropdown-menu">
               <li><%= link_to t("layouts._header.text3"), current_user %></li>
-              <li><%= link_to t("layouts._header.text4"), t("link") %></li>
+              <li><%= link_to t("layouts._header.text4"), edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to t("layouts._header.text5"), logout_path, method: :delete %>
