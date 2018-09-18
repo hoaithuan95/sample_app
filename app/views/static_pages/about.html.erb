@@ -1,13 +1,13 @@
 <% provide:title, t(".title") %>
-<h1>About</h1>
+<h1><%= t("static_pages.about.title") %></h1>
 <p>
-  <%= t(".text4") %><%= link_to t("static_pages.home.link") do %>
+  The <%= link_to t("static_pages.home.link") do %>
       <em>
         <%= t("static_pages.home.link_name") %>
       </em>
     <% end %> <%= t(".text1") %>
-  <%= link_to t(".link_name1"), t(".link1") %><%=t(".text2") %>
+  <%= link_to t(".link_name1"), t(".link1") %> <%= t(".text2") %>
   <%= link_to t(".link_name2"), t(".link2") %>
   <%= t(".text3") %>
-  <%= link_to t(".link_name3"), t(".link3") %>.
+  <%= link_to t(".link_name3"), t(".link3") %>
 </p>

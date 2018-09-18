@@ -32,14 +32,17 @@
 en:
   hello: "Hello world"
   header: "Ruby on Rails Tutorial Sample App"
+  text: "Welcome to the Sample App"
   app: "Sample app"
   static_pages:
     home:
       title: "Home"
       link: "http://www.railstutorial.org/"
       link_name: "Ruby on Rails Tutorial"
+      link1: "http://rubyonrails.org/"
       text1: "This is home page for the"
-      text2: "sample application"
+      text2: "sample application."
+      text3: "Sign up now!"
     help:
       title: "Help"
       link: "http://www.railstutorial.org/help"
@@ -74,3 +77,7 @@ en:
       link_name1: "News"
     _header:
       text1: "Log in"
+  users:
+    new:
+      title: "Sign up"
+      text : "This will be a signup page for new users."
