@@ -36,14 +36,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 48px;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 22.4px;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -52,15 +52,15 @@ h2 {
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+  font-size: 17.6px;
+  line-height: 27.2px;
 }
 
 /* header */
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 27.2px;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -124,7 +124,7 @@ aside {
       line-height: 1;
     }
     h1 {
-      font-size: 1.4em;
+      font-size: 22.4px;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
@@ -151,7 +151,7 @@ input, textarea, select, .uneditable-input {
 }
 
 input {
-  height: auto !important;
+  height: auto;
 }
 
 #error_explanation {

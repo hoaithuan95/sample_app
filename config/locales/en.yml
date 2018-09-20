@@ -32,8 +32,9 @@
 en:
   hello: "Hello world"
   header: "Ruby on Rails Tutorial Sample App"
-  Welcome: "Welcome to the Sample App"
+  welcome: "Welcome to the Sample App"
   app: "Sample app"
+  link: "#"
   static_pages:
     home:
       title: "Home"
@@ -41,7 +42,7 @@ en:
       link_name: "Ruby on Rails Tutorial"
       link1: "http://rubyonrails.org/"
       text1: "This is home page for the"
-      text2: "sample application."
+      text2: "sample application"
       text3: "Sign up now!"
     help:
       title: "Help"
@@ -77,6 +78,11 @@ en:
       link_name1: "News"
     _header:
       text1: "Log in"
+      text2: "Users"
+      text3: "Profile"
+      text4: "Settings"
+      text5: "Log out"
+      text6: "Account"
   users:
     new:
       title: "Sign in"
@@ -92,4 +98,11 @@ en:
       error:
         one: "%{count} error"
         other: "%{count} errors"
-
+  sessions:
+    new:
+      text: "New user?"
+  concerns:
+    sessions:
+      text: "Invalid email/password combination"
+  flash:
+    no_user: "No such user"
