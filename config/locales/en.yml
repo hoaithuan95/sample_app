@@ -100,7 +100,9 @@ en:
         other: "%{count} errors"
   sessions:
     new:
-      text: "New user?"
+      new_user: "New user?"
+      text1: "remember_me"
+      mess: "Remember me on this computer"
   concerns:
     sessions:
       text: "Invalid email/password combination"
