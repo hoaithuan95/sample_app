@@ -57,7 +57,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     return if @user
     redirect_to signup_path
-    flash[:danger] =t("flash.no_user")
+    flash[:danger] = t("flash.no_user")
   end
 
   def logged_in_user
