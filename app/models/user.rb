@@ -10,6 +10,13 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true, length: {minimum: Settings.user.password.min_size}, allow_nil: true
 
+  has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: "Relationship",
+    foreign_key: "follower_id", dependent:   :destroy
+  has_many :passive_relationships, class_name:  "Relationship",
+    foreign_key: "followed_id", dependent:   :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
   has_secure_password
   before_save {email.downcase!}
 
@@ -61,6 +68,24 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.hours.hours.ago
+  end
+
+  def feed
+    following_ids = "SELECT followed_id FROM relationships
+      WHERE  follower_id = :user_id"
+    Micropost.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete(other_user)
+  end
+
+  def following? other_user
+    following.include?(other_user)
   end
 
   private
